@@ -1,0 +1,37 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <symbol viewBox="0 0 20 20" id="back-link">
+        <path d="M13 3L6 10L13 17" stroke-width="2" />
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="promo-link">
+        <path d="M17.1584 11.175L11.1834 17.15C11.0286 17.305 10.8448 17.4279 10.6425 17.5118C10.4402 17.5956 10.2233 17.6388 10.0042 17.6388C9.78522 17.6388 9.56834 17.5956 9.36601 17.5118C9.16368 17.4279 8.97987 17.305 8.82508 17.15L1.66675 9.99999V1.66666H10.0001L17.1584 8.82499C17.4688 9.13726 17.6431 9.55968 17.6431 9.99999C17.6431 10.4403 17.4688 10.8627 17.1584 11.175V11.175Z" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M5.83325 5.83334H5.842" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
+    <symbol viewBox="0 0 34 34" id="slider-prev">
+        <path d="M20 24L13 17L20 10" stroke-width="2" />
+    </symbol>
+
+    <symbol viewBox="0 0 34 34" id="slider-next">
+        <path d="M14 10L21 17L14 24" stroke-width="2" />
+    </symbol>
+
+    <symbol viewBox="0 0 21 19" id="slider-item-2-header">
+        <rect x="4.64282" y="5.10718" width="2.92857" height="8.78571" rx="1.46429" />
+        <rect x="9.03564" y="0.714355" width="2.92857" height="17.5714" rx="1.46429" />
+        <rect x="13.4285" y="5.10718" width="2.92857" height="8.78571" rx="1.46429" />
+        <rect x="17.8215" y="8.03589" width="2.92857" height="2.92857" rx="1.46429" />
+        <rect x="0.25" y="8.03589" width="2.92857" height="2.92857" rx="1.46429" />
+    </symbol>
+
+    <symbol viewBox="0 0 40 40" id="window-close">
+        <rect x="25.8379" y="11.8379" width="2.57885" height="21.9202" transform="rotate(45 25.8379 11.8379)" />
+        <rect x="27.6621" y="27.3384" width="2.57885" height="21.9202" transform="rotate(135 27.6621 27.3384)" />
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="btn">
+        <path d="M7 17L14 10L7 3" stroke-width="2" />
+    </symbol>
+
+</svg>
