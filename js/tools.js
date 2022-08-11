@@ -1,5 +1,26 @@
 $(document).ready(function() {
 
+    $.validator.addMethod('numberTVLength',
+        function(phone_number, element) {
+            return this.optional(element) || phone_number.length == 20;
+        },
+        'Серийный номер должен быть двадцатизначным'
+    );
+
+    $.validator.addMethod('numberTVRU',
+        function(phone_number, element) {
+            return this.optional(element) || phone_number.substr(0, 2).toUpperCase() == 'RU';
+        },
+        'Серийный номер начинается на "RU"'
+    );
+
+    $.validator.addMethod('numberTV',
+        function(phone_number, element) {
+            return this.optional(element) || phone_number.match(/^RU\w\w\w\w\w\w\w\w\w\w\w\w\w\w\w\w\w\w$/i);
+        },
+        'Серийный номер может содержать только цифры и латинские буквы'
+    );
+
     $('form').each(function() {
         initForm($(this));
     });
@@ -32,7 +53,7 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.footer-up-link a').click(function(e) {
+    $('.up-link').click(function(e) {
         $('html, body').animate({'scrollTop': 0});
         e.preventDefault();
     });
@@ -61,11 +82,35 @@ $(document).ready(function() {
         $('.slider .slick-dots li button.active').removeClass('active');
         $('.slider .slick-dots li button').eq(curIndex).addClass('active');
     });
+
+    var clipboardCode = new ClipboardJS('.window-promo-success-code')
+    clipboardCode.on('success', function(e) {
+        alert('Скопировано');
+    });
+
 });
 
 function initForm(curForm) {
+    curForm.find('input.numberTV').attr('autocomplete', 'off');
+    curForm.find('input.numberTV').mask('RUZZZZZZZZZZZZZZZZZZ', {
+        translation: {
+            'Z': {
+                pattern: /\w/, optional: true
+            }
+        }
+    });
+
     curForm.validate({
-        ignore: ''
+        ignore: '',
+        submitHandler: function(form) {
+            var curForm = $(form);
+            if (curForm.hasClass('window-form')) {
+                var formData = new FormData(form);
+                windowOpen(curForm.attr('action'), formData);
+            } else {
+                form.submit();
+            }
+        }
     });
 }
 
@@ -130,3 +175,26 @@ function windowClose() {
         $(window).scrollTop($('.wrapper').data('curScroll'));
     }
 }
+
+$(window).on('load resize scroll', function() {
+
+    var windowScroll = $(window).scrollTop();
+    $('body').append('<div id="body-test-height" style="position:fixed; left:0; top:0; right:0; bottom:0; z-index:-1"></div>');
+    var windowHeight = $('#body-test-height').height();
+    $('#body-test-height').remove();
+
+    if ($('.up-link').length == 1) {
+        if (windowScroll > windowHeight) {
+            $('.up-link').addClass('visible');
+        } else {
+            $('.up-link').removeClass('visible');
+        }
+
+        if (windowScroll + windowHeight > $('footer').offset().top) {
+            $('.up-link').css({'margin-bottom': (windowScroll + windowHeight) - $('footer').offset().top});
+        } else {
+            $('.up-link').css({'margin-bottom': 0});
+        }
+    }
+
+});
