@@ -1,3 +1,21 @@
+SmoothScroll({
+    animationTime    : 800,
+    stepSize         : 75,
+
+    accelerationDelta : 30,
+    accelerationMax   : 2,
+
+    keyboardSupport   : true,
+
+    arrowScroll       : 50,
+
+    pulseAlgorithm   : true,
+    pulseScale       : 4,
+    pulseNormalize   : 1,
+
+    touchpadSupport   : true,
+});
+
 $(document).ready(function() {
 
     $.validator.addMethod('numberTVLength',
@@ -76,7 +94,15 @@ $(document).ready(function() {
         speed: 1000,
         pauseOnFocus: false,
         pauseOnHover: false,
-        pauseOnDotsHover: false
+        pauseOnDotsHover: false,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
     }).on('setPosition', function(event, slick) {
         var curIndex = $('.slider').slick('slickCurrentSlide');
         $('.slider .slick-dots li button.active').removeClass('active');
@@ -196,5 +222,12 @@ $(window).on('load resize scroll', function() {
             $('.up-link').css({'margin-bottom': 0});
         }
     }
+
+    $('.ivi:not(.animated), .nav:not(.animated), .chroma:not(.animated), .sled:not(.animated), .tuv:not(.animated), .atmos:not(.animated), .stereo:not(.animated)').each(function() {
+        var curBlock = $(this);
+        if ((windowScroll + (windowHeight * 3/4)) > curBlock.offset().top) {
+            curBlock.addClass('animated');
+        }
+    });
 
 });
