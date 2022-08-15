@@ -201,6 +201,15 @@ ul li::before {content:"•"; display:block; position:absolute; left:0; top:0; w
     .slider-item-bg-tablet-shadow-2 {height:60px}
     .slider-item-2-content {margin:0 -20px; padding:0 20px; height:420px}
 }
+.slider-item-3-logo {margin:16px 0 0 0}
+.slider-item-3-logo img {display:block; margin:0 auto}
+.slider-item-3-size {margin:9px 0 0 0; font-weight:normal; font-size:24px; line-height:28px; letter-spacing:0}
+
+@media (min-width:1600px) {
+    .slider-item-3-logo {margin:20px 0 0 0}
+    .slider-item-3-logo img {height:41px}
+    .slider-item-3-size {font-size:27px; line-height:32px}
+}
 
 .ivi {margin:139px 0 0 0; position:relative; background:#000000 url(../images/ivi-bg.svg) no-repeat center bottom; padding:60px 0 72px 0; text-align:center}
 .ivi-logo {position:absolute; left:50%; top:-39px; transform:translateX(-50%); line-height:0}
