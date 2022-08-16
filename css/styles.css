@@ -2,9 +2,7 @@
 *::before,
 *::after {outline:none; box-sizing:border-box}
 
-html {min-width:480px}
-
-body {min-width:480px; margin:0; padding:0; font:300 18px/22px Arial, sans-serif; color:#FFFFFF; background:#0C0D13; -webkit-text-size-adjust:100%; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; overflow-anchor:none}
+body {margin:0; padding:0; font:300 18px/22px Arial, sans-serif; color:#FFFFFF; background:#0C0D13; -webkit-text-size-adjust:100%; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; overflow-anchor:none}
 .fonts-loaded body {font-family:Roboto, sans-serif}
 
 @media (min-width:1600px) {
@@ -49,7 +47,7 @@ ul li::before {content:"•"; display:block; position:absolute; left:0; top:0; w
     .container {padding:0 20px}
 }
 
-.wrapper {width:100%; min-width:480px; min-height:100%; position:relative; overflow:hidden}
+.wrapper {width:100%; position:relative; overflow:hidden}
 
 .header {position:absolute; left:0; top:40px; right:0; z-index:99}
 .header-logo {float:left; margin:0 0 0 16px; padding:0 0 0 16px; border-left:1px solid #B4B4B4}
@@ -204,11 +202,15 @@ ul li::before {content:"•"; display:block; position:absolute; left:0; top:0; w
 .slider-item-3-logo {margin:16px 0 0 0}
 .slider-item-3-logo img {display:block; margin:0 auto}
 .slider-item-3-size {margin:9px 0 0 0; font-weight:normal; font-size:24px; line-height:28px; letter-spacing:0}
+.slider-item-3-brands {margin:16px 0 0 0}
+.slider-item-3-brands img {display:block; margin:0 auto}
 
 @media (min-width:1600px) {
     .slider-item-3-logo {margin:20px 0 0 0}
     .slider-item-3-logo img {height:41px}
     .slider-item-3-size {font-size:27px; line-height:32px}
+    .slider-item-3-brands {margin:20px 0 0 0}
+    .slider-item-3-brands img {height:14px}
 }
 
 .ivi {margin:139px 0 0 0; position:relative; background:#000000 url(../images/ivi-bg.svg) no-repeat center bottom; padding:60px 0 72px 0; text-align:center}
@@ -343,6 +345,12 @@ ul li::before {content:"•"; display:block; position:absolute; left:0; top:0; w
     .nav-item-ntsc-text {font-size:12px; line-height:12px}
 }
 
+@media (max-width:479px) {
+    .nav-item a {padding:70% 0 0 0}
+    .nav-item:nth-child(2) a {padding:70% 0 0 0}
+    .nav-item:nth-child(3) a {padding:70% 0 0 0}
+}
+
 .chroma {margin:100px 0 0 0; padding:80px 0; background:#000000; text-align:center}
 .chroma-title {font-weight:500; font-size:44px; line-height:44px; background:linear-gradient(92.29deg, #21AFF5 12.31%, #DE68FB 92.79%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; text-fill-color:transparent}
 .chroma-img {line-height:0}
@@ -376,6 +384,10 @@ ul li::before {content:"•"; display:block; position:absolute; left:0; top:0; w
     .chroma-title {font-size:28px; line-height:28px; padding:0 27px}
     .chroma-img {margin:30px 0 0 0}
     .chroma-text {margin:30px 0 0 0; font-size:20px; line-height:23px}
+}
+
+@media (max-width:479px) {
+    .chroma-title {padding:0}
 }
 
 .sled {margin:100px -999px 0 -999px; padding:100px 999px; background:#000000}
@@ -470,6 +482,13 @@ ul li::before {content:"•"; display:block; position:absolute; left:0; top:0; w
     .sled-promo-link {top:64px; right:50%; margin-right:-87px; height:40px; font-size:16px; line-height:40px}
 }
 
+@media (max-width:479px) {
+    .sled-title {margin:0}
+    .sled-info-ntsc-img {width:80px}
+    .sled-info-ntsc-text {margin:21px 0 0 29px}
+    .sled-promo {width:auto}
+}
+
 .tuv {padding:120px 0 0 0; text-align:center}
 .tuv-title {font-weight:500; font-size:44px; line-height:44px; max-width:740px; margin:0 auto; background:linear-gradient(92.29deg, #21AFF5 12.31%, #DE68FB 92.79%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; text-fill-color:transparent}
 .tuv-text {margin:24px auto 0 auto; max-width:900px; font-weight:normal; font-size:24px; line-height:28px}
@@ -537,6 +556,14 @@ ul li::before {content:"•"; display:block; position:absolute; left:0; top:0; w
     .tuv-info-logo img {max-width:323px}
 }
 
+@media (max-width:479px) {
+    .tuv-title {margin:0}
+    .tuv-info-chart-item {width:45%}
+    .tuv-img-front {width:auto}
+    .tuv-info {width:auto}
+    .tuv-info-logo img {max-width:100%}
+}
+
 .atmos {margin:120px -999px 0 -999px; padding:100px 999px; background:#000000; text-align:center}
 .atmos-title {max-width:635px; margin:0 auto; font-weight:500; font-size:44px; line-height:44px; background:linear-gradient(92.29deg, #FC517E 12.31%, #FCA362 92.79%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; text-fill-color:transparent}
 .atmos-text {max-width:780px; margin:24px auto 0 auto; font-weight:normal; font-size:24px; line-height:28px}
@@ -571,6 +598,10 @@ ul li::before {content:"•"; display:block; position:absolute; left:0; top:0; w
     .atmos {margin:80px -20px 0 -20px; padding:80px 20px 0 20px}
     .atmos-title {margin:0 40px; font-size:28px; line-height:28px}
     .atmos-text {margin:24px 0 0 0; font-size:20px; line-height:23px}
+}
+
+@media (max-width:479px) {
+    .atmos-title {margin:0}
 }
 
 .stereo {margin:0 0 100px 0; padding:80px 0 0 0; background:#000000; text-align:center}

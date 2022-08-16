@@ -143,10 +143,6 @@ function initForm(curForm) {
 function windowOpen(linkWindow, dataWindow) {
     if ($('.window').length == 0) {
         var curPadding = $('.wrapper').width();
-        var curWidth = $(window).width();
-        if (curWidth < 480) {
-            curWidth = 480;
-        }
         var curScroll = $(window).scrollTop();
         $('html').addClass('window-open');
         curPadding = $('.wrapper').width() - curPadding;
@@ -156,7 +152,6 @@ function windowOpen(linkWindow, dataWindow) {
 
         $('.wrapper').css({'top': -curScroll});
         $('.wrapper').data('curScroll', curScroll);
-        $('meta[name="viewport"]').attr('content', 'width=' + curWidth);
     } else {
         $('.window').append('<div class="window-loading"></div>')
         $('.window-container').addClass('window-container-preload');
@@ -197,7 +192,6 @@ function windowClose() {
         $('html').removeClass('window-open');
         $('body').css({'margin-right': 0});
         $('.wrapper').css({'top': 0});
-        $('meta[name="viewport"]').attr('content', 'width=device-width');
         $(window).scrollTop($('.wrapper').data('curScroll'));
     }
 }
