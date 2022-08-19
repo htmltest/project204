@@ -721,6 +721,10 @@ footer {margin:60px 0 0 0; padding:60px 0; background:#171823; font-size:16px; l
     .window-close {right:-14px}
 }
 
+@media (max-width:479px) {
+    .window-close {right:0}
+}
+
 .window-buy {width:684px; padding:85px 0; text-align:center; font-size:0; line-height:0; letter-spacing:-1px; background:#000000; border-radius:18px}
 .window-buy-item {display:inline-block; vertical-align:middle; margin:0 0 0 36px}
 .window-buy-item:first-child {margin:0}
@@ -736,6 +740,13 @@ footer {margin:60px 0 0 0; padding:60px 0; background:#171823; font-size:16px; l
     .window-buy-item img {height:66px}
 }
 
+@media (max-width:479px) {
+    .window-buy {width:300px; padding:40px 0}
+    .window-buy-item {margin:0 0 0 10px}
+    .window-buy-item:first-child {margin:0}
+    .window-buy-item img {height:50px}
+}
+
 .window-promo {width:684px; padding:40px 0 23px 0; text-align:center; background:#000000; border-radius:18px}
 .window-promo-title {font-weight:500; font-size:29px; line-height:34px; background:linear-gradient(92.29deg, #21AFF5 12.31%, #DE68FB 92.79%), #FFFFFF; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; text-fill-color:transparent}
 .window-promo-form {margin:30px auto 0 auto; width:420px}
@@ -746,6 +757,11 @@ footer {margin:60px 0 0 0; padding:60px 0; background:#171823; font-size:16px; l
     .window-promo {width:436px; padding:38px 0 28px 0}
     .window-promo-title {font-size:22px; line-height:26px}
     .window-promo-form {width:380px}
+}
+
+@media (max-width:479px) {
+    .window-promo {width:300px}
+    .window-promo-form {width:280px}
 }
 
 .window-promo-form-input {float:left; width:350px; position:relative}
@@ -760,6 +776,10 @@ label.error {display:block; position:absolute; left:0; top:100%; right:0; margin
 @media (max-width:767px) {
     .window-promo-form-input {width:320px}
     .window-promo-form-input input {height:50px; padding:12px 14px; font-size:20px; line-height:22px}
+}
+
+@media (max-width:479px) {
+    .window-promo-form-input {width:220px}
 }
 
 .window-promo-form-input input:-webkit-autofill,
@@ -782,6 +802,10 @@ label.error {display:block; position:absolute; left:0; top:100%; right:0; margin
 .window-promo-link {margin:54px 0 0 0; font-weight:normal; font-size:16px; line-height:19px; color:#D6D6D6}
 .window-promo-link a {color:#D6D6D6}
 
+@media (max-width:479px) {
+    .window-promo-link {margin:30px 0 0 0}
+}
+
 .window-promo-success {width:684px; padding:28px 0 57px 0; text-align:center; background:#000000; border-radius:18px}
 .window-promo-success-icon {line-height:0}
 .window-promo-success-title {margin:10px 0 0 0; font-weight:500; font-size:29px; line-height:34px; background:linear-gradient(92.29deg, #21AFF5 12.31%, #DE68FB 92.79%), #FFFFFF; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; text-fill-color:transparent}
@@ -798,6 +822,11 @@ label.error {display:block; position:absolute; left:0; top:100%; right:0; margin
     .window-promo-success-code svg {right:11px}
 }
 
+@media (max-width:479px) {
+    .window-promo-success {width:300px}
+    .window-promo-success-code {width:280px}
+}
+
 .window-promo-error {width:684px; padding:53px 0 49px 0; text-align:center; background:#000000; border-radius:18px}
 .window-promo-error-text {max-width:440px; margin:0 auto; font-weight:normal; font-size:24px; line-height:28px}
 .window-promo-error-btn {margin:18px 0 0 0}
@@ -811,6 +840,11 @@ label.error {display:block; position:absolute; left:0; top:100%; right:0; margin
     .window-promo-error {width:436px; padding:38px 0 48px 0}
     .window-promo-error-text {max-width:340px; font-size:20px; line-height:23px}
     .window-promo-error-btn {margin:39px 0 0 0}
+}
+
+@media (max-width:479px) {
+    .window-promo-error {width:300px}
+    .window-promo-error-text {max-width:280px}
 }
 
 @media (min-width:1200px) {
